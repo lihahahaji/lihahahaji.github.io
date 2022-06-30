@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>抽象类和接口 | Haji</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/icon.jpg">
+    <link rel="manifest" href="/photo.jpg">
+    <link rel="apple-touch-icon" href="/photo.jpg">
+    <meta name="description" content="blog">
+    
+    <link rel="preload" href="/assets/css/0.styles.8b4be42b.css" as="style"><link rel="preload" href="/assets/js/app.00ddd5ae.js" as="script"><link rel="preload" href="/assets/js/2.a8975d1e.js" as="script"><link rel="preload" href="/assets/js/19.41962929.js" as="script"><link rel="prefetch" href="/assets/js/10.50e0df0b.js"><link rel="prefetch" href="/assets/js/11.e1196698.js"><link rel="prefetch" href="/assets/js/12.0fac1c77.js"><link rel="prefetch" href="/assets/js/13.c59e8dc7.js"><link rel="prefetch" href="/assets/js/14.00534259.js"><link rel="prefetch" href="/assets/js/15.dc2c918e.js"><link rel="prefetch" href="/assets/js/16.e9c7902a.js"><link rel="prefetch" href="/assets/js/17.0648b68d.js"><link rel="prefetch" href="/assets/js/18.87887a16.js"><link rel="prefetch" href="/assets/js/20.036b370a.js"><link rel="prefetch" href="/assets/js/21.92d7fd59.js"><link rel="prefetch" href="/assets/js/22.4a7c2f62.js"><link rel="prefetch" href="/assets/js/23.0c416db2.js"><link rel="prefetch" href="/assets/js/24.354d9937.js"><link rel="prefetch" href="/assets/js/25.e227ceac.js"><link rel="prefetch" href="/assets/js/26.f5e7131a.js"><link rel="prefetch" href="/assets/js/27.77c77238.js"><link rel="prefetch" href="/assets/js/28.87fde66f.js"><link rel="prefetch" href="/assets/js/29.543e9c9e.js"><link rel="prefetch" href="/assets/js/3.d1a5e0ca.js"><link rel="prefetch" href="/assets/js/30.81b74384.js"><link rel="prefetch" href="/assets/js/31.e1515ccf.js"><link rel="prefetch" href="/assets/js/32.dc7be43f.js"><link rel="prefetch" href="/assets/js/33.f5bf7108.js"><link rel="prefetch" href="/assets/js/34.56ff4f25.js"><link rel="prefetch" href="/assets/js/35.a6bde24f.js"><link rel="prefetch" href="/assets/js/36.b1b5ad75.js"><link rel="prefetch" href="/assets/js/37.f6b58d9e.js"><link rel="prefetch" href="/assets/js/38.ee8117f2.js"><link rel="prefetch" href="/assets/js/39.87ae955e.js"><link rel="prefetch" href="/assets/js/4.5a1c9f91.js"><link rel="prefetch" href="/assets/js/40.82f47c51.js"><link rel="prefetch" href="/assets/js/41.20d0283f.js"><link rel="prefetch" href="/assets/js/42.35e963b3.js"><link rel="prefetch" href="/assets/js/43.bbc81e74.js"><link rel="prefetch" href="/assets/js/44.e3f2929b.js"><link rel="prefetch" href="/assets/js/45.0202d6d4.js"><link rel="prefetch" href="/assets/js/46.8fe07b03.js"><link rel="prefetch" href="/assets/js/47.e28a7fef.js"><link rel="prefetch" href="/assets/js/48.e239d406.js"><link rel="prefetch" href="/assets/js/49.9975748e.js"><link rel="prefetch" href="/assets/js/5.3254b5ce.js"><link rel="prefetch" href="/assets/js/50.5274091b.js"><link rel="prefetch" href="/assets/js/51.5fc0b5f6.js"><link rel="prefetch" href="/assets/js/52.c2b2523b.js"><link rel="prefetch" href="/assets/js/53.803350af.js"><link rel="prefetch" href="/assets/js/54.898b072d.js"><link rel="prefetch" href="/assets/js/55.b1facab5.js"><link rel="prefetch" href="/assets/js/56.e6c9a10d.js"><link rel="prefetch" href="/assets/js/57.fcfeb6ce.js"><link rel="prefetch" href="/assets/js/58.a71289f6.js"><link rel="prefetch" href="/assets/js/59.faab120e.js"><link rel="prefetch" href="/assets/js/6.f2f2ddae.js"><link rel="prefetch" href="/assets/js/60.dde2da2f.js"><link rel="prefetch" href="/assets/js/61.6f17603c.js"><link rel="prefetch" href="/assets/js/62.d064f61c.js"><link rel="prefetch" href="/assets/js/63.1e6a590e.js"><link rel="prefetch" href="/assets/js/64.e8c8798f.js"><link rel="prefetch" href="/assets/js/65.a01db27b.js"><link rel="prefetch" href="/assets/js/66.f1e2a4c7.js"><link rel="prefetch" href="/assets/js/67.6e0f1c8d.js"><link rel="prefetch" href="/assets/js/68.f7960676.js"><link rel="prefetch" href="/assets/js/69.799b5fee.js"><link rel="prefetch" href="/assets/js/7.1344c1fa.js"><link rel="prefetch" href="/assets/js/70.aa3ad6eb.js"><link rel="prefetch" href="/assets/js/8.9d0c0b48.js"><link rel="prefetch" href="/assets/js/9.51f9cba8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8b4be42b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/icon.jpg" alt="Haji" class="logo"> <span class="site-name can-hide">Haji</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="https://www.cnblogs.com/lihahahahaji/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  cnBlog
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="http://lihaji.top" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Site
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="https://www.cnblogs.com/lihahahahaji/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  cnBlog
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="http://lihaji.top" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Site
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Essay</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Android</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>OS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Water</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Java</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/Java/Java抽象类和接口.html" class="active sidebar-link">抽象类和接口</a></li><li><a href="/blog/Java/JAVA 多态.html" class="sidebar-link">Java 多态</a></li><li><a href="/blog/Java/SSM.html" class="sidebar-link">SSM</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Math</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="抽象类和接口"><a href="#抽象类和接口" class="header-anchor">#</a> 抽象类和接口</h1> <p><img src="https://img2020.cnblogs.com/blog/2106911/202012/2106911-20201201162953427-1028281907.png" alt=""></p> <h2 id="一、抽象类"><a href="#一、抽象类" class="header-anchor">#</a> 一、抽象类</h2> <h3 id="_1-定义"><a href="#_1-定义" class="header-anchor">#</a> 1.定义</h3> <p>在面向对象的概念中，所有的对象都是通过类来描绘的，但是反过来，并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一个具体的对象，这样的类就是抽象类。</p> <h3 id="_2-性质"><a href="#_2-性质" class="header-anchor">#</a> 2.性质</h3> <p>（1）抽象类不能实例化对象。</p> <p>（2）抽象类的成员变量、成员方法和构造方法的访问方式和普通类一样。</p> <p>（3）抽象类必须被继承，才能被使用。</p> <p>（4）一个继承抽象类的类必须实现抽象父类的所有抽象方法，否则这个类仍然是抽象类。</p> <p>（5）在Java中抽象类表示的是一种继承关系，一个类只能继承一个抽象类，而一个类却可以实现多个接口。</p> <h3 id="_3-定义抽象类"><a href="#_3-定义抽象类" class="header-anchor">#</a> 3.定义抽象类</h3> <p><strong>使用abstract class来定义抽象类。</strong></p> <p>例如下列代码定义了抽象类Employee</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Employee</span>
+<span class="token punctuation">{</span>
+   <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+   <span class="token keyword">private</span> <span class="token class-name">String</span> address<span class="token punctuation">;</span>
+   <span class="token keyword">private</span> <span class="token keyword">int</span> number<span class="token punctuation">;</span>
+   <span class="token keyword">public</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> address<span class="token punctuation">,</span> <span class="token keyword">int</span> number<span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Constructing an Employee&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>address <span class="token operator">=</span> address<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>number <span class="token operator">=</span> number<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">computePay</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+     <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Inside Employee computePay&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">return</span> <span class="token number">0.0</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">mailCheck</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Mailing a check to &quot;</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name
+       <span class="token operator">+</span> <span class="token string">&quot; &quot;</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> name <span class="token operator">+</span> <span class="token string">&quot; &quot;</span> <span class="token operator">+</span> address <span class="token operator">+</span> <span class="token string">&quot; &quot;</span> <span class="token operator">+</span> number<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> address<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAddress</span><span class="token punctuation">(</span><span class="token class-name">String</span> newAddress<span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+      address <span class="token operator">=</span> newAddress<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+     <span class="token keyword">return</span> number<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>注意到该 Employee 类没有什么不同，尽管该类是抽象类，但是它仍然有 3 个成员变量，7 个成员方法和 1 个构造方法。</p> <p><strong>但是 不能使用Employee类直接新建实例！</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AbstractDemo</span>
+<span class="token punctuation">{</span>
+   <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+      <span class="token comment">/* 以下是不允许的，会引发错误 */</span>
+      <span class="token class-name">Employee</span> e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token string">&quot;George W.&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Houston, TX&quot;</span><span class="token punctuation">,</span> <span class="token number">43</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;\n Call mailCheck using Employee reference--&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      e<span class="token punctuation">.</span><span class="token function">mailCheck</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_4-继承抽象类"><a href="#_4-继承抽象类" class="header-anchor">#</a> 4.继承抽象类</h3> <p>我们能通过一般的方法继承Employee类：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Salary</span> <span class="token keyword">extends</span> <span class="token class-name">Employee</span>
+<span class="token punctuation">{</span>
+   <span class="token keyword">private</span> <span class="token keyword">double</span> salary<span class="token punctuation">;</span> <span class="token comment">//Annual salary</span>
+   <span class="token keyword">public</span> <span class="token class-name">Salary</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> address<span class="token punctuation">,</span> <span class="token keyword">int</span> number<span class="token punctuation">,</span> <span class="token keyword">double</span>
+      salary<span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+       <span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> address<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token function">setSalary</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">mailCheck</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+       <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Within mailCheck of Salary class &quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Mailing check to &quot;</span> <span class="token operator">+</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+       <span class="token operator">+</span> <span class="token string">&quot; with salary &quot;</span> <span class="token operator">+</span> salary<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">getSalary</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+       <span class="token keyword">return</span> salary<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setSalary</span><span class="token punctuation">(</span><span class="token keyword">double</span> newSalary<span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+       <span class="token keyword">if</span><span class="token punctuation">(</span>newSalary <span class="token operator">&gt;=</span> <span class="token number">0.0</span><span class="token punctuation">)</span>
+       <span class="token punctuation">{</span>
+          salary <span class="token operator">=</span> newSalary<span class="token punctuation">;</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">computePay</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Computing salary pay for &quot;</span> <span class="token operator">+</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> salary<span class="token operator">/</span><span class="token number">52</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>尽管我们不能实例化一个 Employee 类的对象，但是如果我们实例化一个 Salary 类对象，该对象将从 Employee 类继承 7 个成员方法，且通过该方法可以设置或获取三个成员变量。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AbstractDemo</span>
+<span class="token punctuation">{</span>
+   <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+      <span class="token class-name">Salary</span> s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Salary</span><span class="token punctuation">(</span><span class="token string">&quot;Mohd Mohtashim&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Ambehta, UP&quot;</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3600.00</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token class-name">Employee</span> e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Salary</span><span class="token punctuation">(</span><span class="token string">&quot;John Adams&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Boston, MA&quot;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2400.00</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Call mailCheck using Salary reference --&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      s<span class="token punctuation">.</span><span class="token function">mailCheck</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;\n Call mailCheck using Employee reference--&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      e<span class="token punctuation">.</span><span class="token function">mailCheck</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_5-抽象方法"><a href="#_5-抽象方法" class="header-anchor">#</a> 5.抽象方法</h3> <p>如果你想设计这样一个类，该类包含一个特别的成员方法，该方法的具体实现由它的子类确定，那么你可以在父类中声明该方法为抽象方法。</p> <p><strong>Abstract 关键字</strong>同样可以用来声明抽象方法，抽象方法只包含一个方法名，而没有方法体。</p> <p>抽象方法没有定义，方法名后面直接跟一个分号，而不是花括号。</p> <p>例如：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Employee</span>
+<span class="token punctuation">{</span>
+   <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+   <span class="token keyword">private</span> <span class="token class-name">String</span> address<span class="token punctuation">;</span>
+   <span class="token keyword">private</span> <span class="token keyword">int</span> number<span class="token punctuation">;</span>
+   
+   <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">double</span> <span class="token function">computePay</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   
+   <span class="token comment">//其余代码</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>声明抽象方法会造成以下两个结果：</p> <ul><li>如果一个类包含抽象方法，那么该类必须是抽象类。</li> <li>任何子类必须重写父类的抽象方法，或者声明自身为抽象类。</li></ul> <p>也就是上文提到的抽象类的性质中的第4条。</p> <h3 id="_6-抽象类总结规定"><a href="#_6-抽象类总结规定" class="header-anchor">#</a> 6.抽象类总结规定</h3> <ul><li>抽象类不能被实例化(初学者很容易犯的错)，如果被实例化，就会报错，编译无法通过。只有抽象类的非抽象子类可以创建对象。</li> <li>抽象类中不一定包含抽象方法，但是有抽象方法的类必定是抽象类。</li> <li>抽象类中的抽象方法只是声明，不包含方法体，就是不给出方法的具体实现也就是方法的具体功能。</li> <li>构造方法，类方法（用 static 修饰的方法）不能声明为抽象方法。</li> <li>抽象类的子类必须给出抽象类中的抽象方法的具体实现，除非该子类也是抽象类。</li></ul> <h2 id="二、接口"><a href="#二、接口" class="header-anchor">#</a> 二、接口</h2> <h3 id="_1-定义-2"><a href="#_1-定义-2" class="header-anchor">#</a> 1.定义</h3> <p>在JAVA编程语言中是一个抽象类型，是抽象方法的集合，接口通常以interface来声明。一个类通过继承接口的方式，从而来继承接口的抽象方法。</p> <h3 id="_2-性质-2"><a href="#_2-性质-2" class="header-anchor">#</a> 2.性质</h3> <p>（1）接口不能用于实例化对象。</p> <p>（2）接口没有构造方法。</p> <p>（3）接口中所有的方法必须是抽象方法。</p> <p>（4）接口不能包含成员变量，除了 static 和 final 变量。</p> <p>（5）接口不是被类继承了，而是要被类实现。 （implements）</p> <p>（6）接口支持多继承。</p> <p>（7）接口中每一个方法也是隐式抽象的,接口中的方法会被隐式的指定为 <strong>public abstract</strong>（只能是 public abstract，其他修饰符都会报错）。</p> <p>（8）接口中可以含有变量，但是接口中的变量会被隐式的指定为 <strong>public static final</strong> 变量（并且只能是 public，用 private 修饰会报编译错误）。</p> <p>（9）接口中的方法是不能在接口中实现的，只能由<strong>实现接口的类</strong>来实现接口中的方法。</p> <h3 id="_3-声明接口"><a href="#_3-声明接口" class="header-anchor">#</a> 3.声明接口</h3> <p>接口的声明语法格式如下：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token punctuation">[</span>可见度<span class="token punctuation">]</span> <span class="token keyword">interface</span> 接口名称 <span class="token punctuation">[</span><span class="token keyword">extends</span> 其他的接口名<span class="token punctuation">]</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 声明变量</span>
+        <span class="token comment">// 抽象方法</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">//Interface关键字用来声明一个接口。下面是接口声明的一个简单例子。</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">NameOfInterface</span>
+<span class="token punctuation">{</span>
+   <span class="token comment">//任何类型 final, static 字段</span>
+   <span class="token comment">//抽象方法</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>注意：接口中的方法都是公有的。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//实例：</span>
+<span class="token keyword">interface</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">travel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_4-实现接口"><a href="#_4-实现接口" class="header-anchor">#</a> 4.实现接口</h3> <p>当类实现接口的时候，类要实现接口中所有的方法。否则，<strong>类必须声明为抽象的类</strong>。（与抽象类类似）</p> <p>类使用<strong>implements</strong>关键字实现接口。在类声明中，Implements关键字放在class声明后面。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//实现一个接口的语法，可以使用这个公式：</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token keyword">implements</span> 接口名称<span class="token punctuation">[</span><span class="token punctuation">,</span> 其他接口名称<span class="token punctuation">,</span> 其他接口名称<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre></div><p>实例：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MammalInt</span> <span class="token keyword">implements</span> <span class="token class-name">Animal</span><span class="token punctuation">{</span>
+ 
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Mammal eats&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+ 
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">travel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Mammal travels&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span> 
+ 
+   <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">noOfLegs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+ 
+   <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token class-name">MammalInt</span> m <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MammalInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      m<span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      m<span class="token punctuation">.</span><span class="token function">travel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>`
+</code></pre></div><p>重写接口中声明的方法时，需要注意以下规则：</p> <ul><li>类在实现接口的方法时，不能抛出强制性异常，只能在接口中，或者继承接口的抽象类中抛出该强制性异常。</li> <li>类在重写方法时要保持一致的方法名，并且应该保持相同或者相兼容的返回值类型。</li> <li>如果实现接口的类是抽象类，那么就没必要实现该接口的方法。</li></ul> <p>在实现接口的时候，也要注意一些规则：</p> <ul><li>一个类可以同时实现多个接口。</li> <li>一个类只能继承一个类，但是能实现多个接口。</li> <li>一个接口能继承另一个接口，这和类之间的继承比较相似。</li></ul> <h3 id="_5-接口的继承"><a href="#_5-接口的继承" class="header-anchor">#</a> 5.接口的继承</h3> <p>一个接口能继承另一个接口，和类之间的继承方式比较相似。接口的继承使用extends关键字，子接口继承父接口的方法。</p> <p>下面的Sports接口被Hockey和Football接口继承：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">// 文件名: Sports.java</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Sports</span>
+<span class="token punctuation">{</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setHomeTeam</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setVisitingTeam</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token comment">// 文件名: Football.java</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Football</span> <span class="token keyword">extends</span> <span class="token class-name">Sports</span>
+<span class="token punctuation">{</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">homeTeamScored</span><span class="token punctuation">(</span><span class="token keyword">int</span> points<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">visitingTeamScored</span><span class="token punctuation">(</span><span class="token keyword">int</span> points<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">endOfQuarter</span><span class="token punctuation">(</span><span class="token keyword">int</span> quarter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token comment">// 文件名: Hockey.java</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Hockey</span> <span class="token keyword">extends</span> <span class="token class-name">Sports</span>
+<span class="token punctuation">{</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">homeGoalScored</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">visitingGoalScored</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">endOfPeriod</span><span class="token punctuation">(</span><span class="token keyword">int</span> period<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">overtimePeriod</span><span class="token punctuation">(</span><span class="token keyword">int</span> ot<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Hockey接口自己声明了四个方法，从Sports接口继承了两个方法，这样，实现Hockey接口的类需要实现六个方法。</p> <p>相似的，实现Football接口的类需要实现五个方法，其中两个来自于Sports接口。</p> <h3 id="_6-接口的多继承"><a href="#_6-接口的多继承" class="header-anchor">#</a> 6.接口的多继承</h3> <p>在Java中，类的多继承是不合法，但接口允许多继承。</p> <p>在接口的多继承中extends关键字只需要使用一次，在其后跟着继承接口。 如下所示：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Hockey</span> <span class="token keyword">extends</span> <span class="token class-name">Sports</span><span class="token punctuation">,</span> <span class="token class-name">Event</span>
+</code></pre></div><p>以上的程序片段是合法定义的子接口，与类不同的是，接口允许多继承，而 Sports及 Event 可能定义或是继承相同的方法</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">5/12/2022, 3:44:40 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/Acm/L2-3 完全二叉树的层序遍历.html" class="prev">
+        2020.11 程序设计天梯赛  L2-3 完全二叉树的层序遍历 (25分)
+      </a></span> <span class="next"><a href="/blog/Java/JAVA 多态.html">
+        Java 多态
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.00ddd5ae.js" defer></script><script src="/assets/js/2.a8975d1e.js" defer></script><script src="/assets/js/19.41962929.js" defer></script>
+  </body>
+</html>

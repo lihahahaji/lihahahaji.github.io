@@ -1,0 +1,25 @@
+{
+    "name": "Lihaji",
+    "short_name": "haji",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#2196f3",
+    "description": "haji的个人主页",
+    "theme_color": "blue",
+    "icons": [
+      {
+        "src": "./icon.jpg",
+        "sizes": "144x144",
+        "type": "image/jpg"
+      }
+    ],
+    "related_applications": [
+      {
+        "platform": "web"
+      },
+      {
+        "platform": "play",
+        "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
+      }
+    ]
+  }
